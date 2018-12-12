@@ -3,7 +3,6 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.util.Arrays;
 import java.util.Random;
 import javax.swing.JPanel;
 
@@ -33,7 +32,18 @@ public class Lienzo extends JPanel {
 	}
 
 	private void ordenarVector() {
-		Arrays.sort(vector);
+		for (int i = 1; i < vector.length; i++) {
+			int j = 0;
+			while (j < i && vector[j] < vector[i])
+				j++;
+			if (j < i) {
+				int aux = vector[i];
+				for (int k = i - 1; k >= j; k--) {
+					vector[k + 1] = vector[k];
+					vector[j] = aux;
+				}
+			}
+		}
 	}
 
 	private void llenarVector() {
