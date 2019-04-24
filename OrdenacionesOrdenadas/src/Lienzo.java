@@ -6,7 +6,6 @@ import java.awt.event.KeyEvent;
 import java.util.Random;
 import javax.swing.JPanel;
 
-@SuppressWarnings("serial")
 public class Lienzo extends JPanel {
 
 	private static Random r = new Random();

@@ -2,7 +2,6 @@
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
-@SuppressWarnings("serial")
 public class Main extends JFrame {
 
 	public Main() {
